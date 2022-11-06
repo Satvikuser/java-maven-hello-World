@@ -1,10 +1,13 @@
 pipeline{
     agent any
-
-    tools {
-         maven 'maven'
-         jdk 'java'
+    environment {
+        PATH = "$PATH:/opt/maven/apache-maven-3.8.6/bin"
     }
+
+    //tools {
+         //maven 'maven'
+         //jdk 'java'
+   // }
 
     stages{
         stage('checkout'){
